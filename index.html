@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Said AIT SALAH - Portfolio</title>
+  <style>
+    /* Variables de couleurs */
+    :root {
+      --primary-color: #0a3d62;
+      --secondary-color: #3c6382;
+      --accent-color: #0c2461;
+      --text-color: #333;
+      --bg-color: #f4f4f4;
+    }
+
+    /* Style global */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0.2rem 0;
+      font-size: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Section générale */
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    /* Timeline (Formation et Expérience) */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--secondary-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      background: var(--accent-color);
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      top: 4px;
+    }
+
+    /* Cards pour les expériences */
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Compétences : diagrammes/barres */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .skill {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Said AIT SALAH</h1>
+    <p>saidaitsalah03@gmail.com | +33 7 45 63 79 95 | <a href="https://linkedin.com/in/said-ait-salah-0b583820b" style="color: #fff;">LinkedIn</a></p>
+    <nav>
+      <ul>
+        <li><a href="#about">Accueil</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#activities">Activités</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>À propos de moi</h2>
+    <p>Ingénieur logiciel passionné par le Big Data, l’intelligence artificielle et les systèmes distribués, je conçois des solutions innovantes et performantes. Fort de plusieurs stages et d’expériences en alternance dans des environnements agiles et à haute charge, je m’investis pleinement dans des projets impactant des milliers d’utilisateurs et transformant la donnée en savoir.</p>
+  </section>
+
+  <section id="formation">
+    <h2>Formation</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <strong>Université de Technologie de Troyes</strong><br>
+        Mastère Spécialisé Expert Big Data Engineer<br>
+        <em>Paris, France | 2025-2026</em>
+      </div>
+      <div class="timeline-item">
+        <strong>Ecole Nationale d'ingénieurs de Brest</strong><br>
+        Modélisation de Systèmes d'Informations, IA<br>
+        <em>Brest, France | 2022-2025</em>
+      </div>
+      <div class="timeline-item">
+        <strong>Ecole Supérieure de Technologie de Salé</strong><br>
+        Génie Logiciel, assistant d'enseignement en UML<br>
+        <em>Salé, Maroc | Sept 2020 – Juin 2022</em>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Expérience Professionnelle</h2>
+    
+    <div class="card">
+      <h3>Ifremer (Alternance)</h3>
+      <p><em>Brest, Bretagne, France | Sept 2024 – Sept 2025</em></p>
+      <ul>
+        <li>Développement d’un logiciel d’intégration/visualisation de données génomiques multi-sources.</li>
+        <li>Déploiement sur supercalculateur DATARMOR (architecture HPC) pour traitement de 20+ sources hétérogènes.</li>
+        <li>Animation de workshops techniques et optimisation de performances (réduction de 60% du temps de chargement via Asyncio).</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>CGI (Stage)</h3>
+      <p><em>Lyon, France | Fév 2024 – Août 2024</em></p>
+      <ul>
+        <li>Développement de microservices Java/SpringBoot pour le traitement asynchrone des données (Kafka, MongoDB, S3 MinIO).</li>
+        <li>Collaboration dans une équipe Agile de 150 personnes pour l’amélioration de la couverture de tests à plus de 80%.</li>
+        <li>Mise en place de déploiements automatiques via pipelines CI/CD et GitOps (ArgoCD).</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>MJ Tech (Stage)</h3>
+      <p><em>Rabat, Maroc | Avr 2022 – Juin 2022</em></p>
+      <ul>
+        <li>Développement d’un CRM pour la gestion commerciale multi-sectorielle (+30% d’économie opérationnelle).</li>
+        <li>Mise en place d’un système de cache distribué (Redis) pour améliorer la performance des transactions.</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h3>Webjet Conseil (Stage d’initiation)</h3>
+      <p><em>Rabat, Maroc | Juil 2021 – Août 2021</em></p>
+      <ul>
+        <li>Conception et développement d’une application web pour une agence de location de voitures (Laravel, MySQL).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Compétences & Technologies</h2>
+    <div class="skills">
+      <div class="skill">
+        <h4>Langages</h4>
+        <p>Python, Java, Angular, C++ (Qt), SQL, PL/SQL</p>
+      </div>
+      <div class="skill">
+        <h4>Technologies</h4>
+        <p>Kubernetes, Docker, Jenkins, Git, Kafka, AWS, Jira</p>
+      </div>
+      <div class="skill">
+        <h4>Frameworks</h4>
+        <p>SpringBoot3, FastAPI, Pytorch</p>
+      </div>
+      <div class="skill">
+        <h4>Langues</h4>
+        <p>Français, Anglais, Arabe, Espagnol</p>
+      </div>
+      <div class="skill">
+        <h4>Certifications</h4>
+        <p>TOEIC (890/990), Testing in Java, SST, Habilitation électrique B1V</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <h2>Activités & Engagement</h2>
+    <div class="card">
+      <h3>ERASMUS Student Network</h3>
+      <p><em>Brest, France | Juil 2023 – Aujourd'hui</em></p>
+      <ul>
+        <li>Responsable du pôle social dans l’organisation et la coordination d’événements culturels et sociaux.</li>
+        <li>Collaboration avec des partenaires institutionnels et commerciaux (CMI, Préfecture de Brest, etc.).</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Said AIT SALAH | <a style="color: #fff; text-decoration: underline;" href="mailto:saidaitsalah03@gmail.com">Contact</a></p>
+  </footer>
+</body>
+</html>
